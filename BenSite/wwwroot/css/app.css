@@ -12,7 +12,7 @@ a, .btn-link {
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
+    background-color: #F04923;
     border-color: #1861ac;
 }
 
@@ -82,7 +82,7 @@ a, .btn-link {
     }
 
         .loading-progress circle:last-child {
-            stroke: #1b6ec2;
+            stroke: #F04923;
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -100,4 +100,13 @@ a, .btn-link {
 
 code {
     color: #c02d76;
+}
+
+body {
+    font-family: 'Finger Paint', cursive;
+}
+
+.bens-navbar {
+    background-color: #0067A5;
+    color: white;
 }
