@@ -1,29 +1,34 @@
 ﻿@page "/"
 
-<h3>About Me</h3>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>Bio:
+    <main class="BenMain">
+    <h3>About Me</h3>
     Hello! Welcome to BenSite a fan page dedicated to yours truly.
-    Here is the Link to the website share it with friends: https://proud-sky-01215681e.3.azurestaticapps.net/
+    @* https://proud-sky-01215681e.3.azurestaticapps.net/ *@
     </main>
-    <section>
-        <img src="/css/images/ben.jpg" alt="ben in a hat" width="400" height="400">
-    </section>
-    <p>
-        <h2>What I do in my free time</h2>
-        I love skiing during the winter with my family. I've been talking classes at snow college for three semesters.
-        I plan on transferring to Utah State University in the fall. I've got five siblings, two dogs, and a pet bird.
-        My favorite movie is Megamind. Favorite TV show is The Simpsons. My favorite video game is Mario Kart.
-        I also love to practice the French horn in my free time and perform whenever my schedule allows.
-    </p>
+    <div class="BenDiv">
+        <section>
+            <img src="/css/images/ben.jpg" alt="ben in a hat">
+        </section>
+        <section class="graph">
+            <h1>What does Ben do in his free time?</h1>
+            <p>
+                I love skiing during the winter with my family. I've been talking classes at snow college for three semesters.
+                I plan on transferring to Utah State University in the fall. I've got five siblings, two dogs, and a pet bird.
+                My favorite movie is Megamind. Favorite TV show is The Simpsons. My favorite video game is Mario Kart.
+                I also love to practice the French horn in my free time and perform whenever my schedule allows.
+                <button type="button">Silly Button</button>
+            </p>
+        </section>
+    </div>
 </body>
 <footer>
-    BenSite 2025 🥸
+    BenSite 2025 🥸 <a href="https://www.facebook.com/">Find me on Facebook!</a> Benjamin.Mair@students.snow.edu
 </footer>
 
 @* Colors
