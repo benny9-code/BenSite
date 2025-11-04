@@ -139,3 +139,16 @@ button {
     border-radius: 15px;
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
+
+.topResume {
+    color: #0067A5;
+    text-align: center;
+}
+
+
+/*thanks chat*/
+.Hoverbit:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+    background-color: #0067A5;
+}
