@@ -1,23 +1,87 @@
 ﻿@page "/table"
 
+
+
 <h3>Favorite Movies</h3>
-<table>
-    <tr>
-        <th>Animated</th>
-        <th>Action</th>
-        <th>Horror</th>
-    </tr>
-    <tr>
-        <td>Megamind A+</td>
-        <td>Inception C+</td>
-        <td>Signs B-</td>
-    </tr>
-    <tr>
-        <td>Lego Batman B+</td>
-        <td>Count of Monty Cristo S tier</td>
-        <td>The Six Sense C-</td>
-    </tr>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Animated</th>
+            <th scope="col">Action</th>
+            <th scope="col">Horror</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td> bg-sMegamind [A+]</td>
+            <td> Inception [C+]</td>
+            <td> Signs [B-]</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td> Lego Batman [B+]</td>
+            <td> Count of Monte Cristo [S tier]</td>
+            <td> The Sixth Sense [C-]</td>
+        </tr>
+    </tbody>
 </table>
+
+
+
+@* bootstrap *@
+<h3>Course Schedule</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course</th>
+            <th scope="col">Days</th>
+            <th scope="col">Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-primary text-white">
+            <th scope="row">1</th>
+            <td>College Physics I</td>
+            <td>Mon, Wed, Thu, Fri</td>
+            <td>8:30 AM – 9:30 AM</td>
+        </tr>
+        <tr class="bg-secondary text-white">
+            <th scope="row">2</th>
+            <td>College Physics I Lab</td>
+            <td>Tue</td>
+            <td>8:30 AM – 10:30 AM</td>
+        </tr>
+        <tr class="bg-success text-white">
+            <th scope="row">3</th>
+            <td>Data Structures & Algorithms</td>
+            <td>Mon, Wed, Fri</td>
+            <td>9:30 AM – 10:30 AM</td>
+        </tr>
+        <tr class="bg-info text-white">
+            <th scope="row">4</th>
+            <td>Intro to Web Development</td>
+            <td>Tue, Thu</td>
+            <td>11:00 AM – 12:30 PM</td>
+        </tr>
+        <tr class="bg-warning text-dark">
+            <th scope="row">5</th>
+            <td>Calculus I</td>
+            <td>Mon – Fri</td>
+            <td>1:30 PM – 2:30 PM</td>
+        </tr>
+        <tr class="bg-danger text-white">
+            <th scope="row">6</th>
+            <td>Fundamentals of Residence Life</td>
+            <td>Fri</td>
+            <td>4:30 PM – 5:30 PM</td>
+        </tr>
+    </tbody>
+</table>
+
 
 
 
