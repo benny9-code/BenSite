@@ -131,8 +131,9 @@ img {
     border: 10px solid #0067A5;
     border-radius: 4px;
     padding: 5px;
-    width: 300px;
+    max-width: 100%;
     height: auto;
+    display: block;
 }
 
 button {
@@ -152,3 +153,15 @@ button {
     transition: 0.3s ease;
     background-color: #0067A5;
 }
+
+/* modal stuff for home page */
+dialog {
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }

@@ -22,14 +22,38 @@
                 I plan on transferring to Utah State University in the fall. I've got five siblings, two dogs, and a pet bird.
                 My favorite movie is Megamind. Favorite TV show is The Simpsons. My favorite video game is Mario Kart.
                 I also love to practice the French horn in my free time and perform whenever my schedule allows.
-                <button type="button">Silly Button</button>
+                <button type="button" id="goofy">Goofy Button</button>
             </p>
         </section>
     </div>
 </body>
+
 <footer>
     BenSite 2025 🥸 <a href="https://www.facebook.com/">Find me on Facebook!</a> Benjamin.Mair@students.snow.edu
 </footer>
+
+@* modal inerworkings *@
+<dialog id="myModal">
+    <h2>Modal Title</h2>
+    <p>Thanks for coming to my website! <br/><strong>Have a great day -ben</strong></p>
+    <button type="button" id="closeModalBtn">Close</button>
+</dialog>
+
+@* modal script *@
+<script>
+    const openModalBtn = document.getElementById('goofy');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const myModal = document.getElementById('myModal');
+
+    openModalBtn.addEventListener('click', () => {
+      myModal.showModal(); // Displays the modal
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      myModal.close(); // Closes the modal
+    });
+</script>
+
 
 @* Colors
 Green: 00A86B
