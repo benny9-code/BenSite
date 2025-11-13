@@ -1,3 +1,8 @@
+:root {
+    --bs-primary: #FFBF00;
+    --bs-secondary: #0067A5;
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -103,7 +108,7 @@ code {
 }
 
 body {
-    font-family: 'Finger Paint', cursive;
+    font-family: 'Finger Paint', cursive !important;
 }
 
 .bens-navbar {
@@ -128,12 +133,8 @@ body {
 }
 
 img {
-    border: 10px solid #0067A5;
-    border-radius: 4px;
-    padding: 5px;
-    max-width: 100%;
-    height: auto;
-    display: block;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 button {
