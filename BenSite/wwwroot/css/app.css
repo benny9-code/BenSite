@@ -3,9 +3,9 @@
     --bs-secondary: #0067A5;
 }
 
-html, body {
+/*html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+}*/
 
 h1:focus {
     outline: none;
@@ -107,7 +107,7 @@ code {
     color: #c02d76;
 }
 
-body {
+bodyHome {
     font-family: 'Finger Paint', cursive !important;
 }
 
@@ -133,8 +133,8 @@ body {
 }
 
 img {
-    vertical-align: middle;
-    border-radius: 50%;
+/*    vertical-align: middle;
+    border-radius: 50%;*/
 }
 
 button {
@@ -166,3 +166,63 @@ dialog {
     dialog::backdrop {
         background-color: rgba(0, 0, 0, 0.5);
     }
+
+/*ClonePage*/
+bodyClone {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theHead, .theHead2{
+    flex: 1;
+    padding: 40px;
+    background: #D3D3D3;
+    color: navy;
+    font-size: 50px;
+}
+
+.cloneBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    background: navy;
+    color: lightgrey;
+    font-size: 25px;
+}
+
+.mainGreyBox {
+    padding: 40px;
+    background: #D3D3D3;
+    color: navy;
+    font-size: 25px;
+}
+
+photoAndBannners {
+    display: flex;
+}
+
+.bannerKidsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.bannerKids {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 1;
+    padding: 20px;
+    background: #00008B;
+    color: lightgrey;
+    font-size: 25px;
+}
+
