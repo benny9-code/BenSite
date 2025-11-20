@@ -233,3 +233,128 @@ bodyClone {
     object-fit: cover
 }
 
+/*Experiment page from chat (with non coliding namespace)*/
+.my3d-demo {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+    /* Cube styles ONLY inside this container */
+    .my3d-demo .cube {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: spin 5s infinite linear;
+    }
+
+    .my3d-demo .face {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        background: #2196f3;
+        opacity: 0.9;
+        border: 2px solid #fff;
+    }
+
+    .my3d-demo .front {
+        transform: translateZ(75px);
+    }
+
+    .my3d-demo .back {
+        transform: rotateY(180deg) translateZ(75px);
+    }
+
+    .my3d-demo .right {
+        transform: rotateY(90deg) translateZ(75px);
+    }
+
+    .my3d-demo .left {
+        transform: rotateY(-90deg) translateZ(75px);
+    }
+
+    .my3d-demo .top {
+        transform: rotateX(90deg) translateZ(75px);
+    }
+
+    .my3d-demo .bottom {
+        transform: rotateX(-90deg) translateZ(75px);
+    }
+
+@keyframes spin {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
+
+/*
+    SEO notes:
+    SEO - Lead by google 
+    PageTitle - Everypage should have one 
+    Mettatag - summerpage 
+    h1 tag - tells what is this page
+    Image alt text
+    file name mtter - img234234axafxi.png
+    Internal Links
+    url clean
+    Mobile Frendly - Must
+    open graph tags
+    speed! - slow site no good
+
+
+    flie types - WebP Best
+    smaller than jpeg
+    smaller and better than png(almost all cases)
+    support everywhere
+    logo SVG or EPS --Vector
+*/
+
+
+/*Chats cyber bar (change to match color scheme later haha)*/
+
+/* Simple Cyber Sidebar */
+.cyber-menu {
+    background: linear-gradient(to bottom, #0067A5, #00A86B);
+    height: 100%;
+    padding: 20px;
+    color: white;
+}
+
+    /* Make nav items neon-ish */
+    .cyber-menu a {
+        display: block;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 6px;
+        transition: 0.25s ease;
+    }
+
+        /* Hover = yellow glow */
+        .cyber-menu a:hover {
+            background: #FFBF00;
+            color: black;
+            transform: translateX(5px);
+        }
+
+        /* Active = red highlight */
+        .cyber-menu a.active {
+            border-color: #F04923;
+            background: rgba(240, 73, 35, 0.25);
+        }

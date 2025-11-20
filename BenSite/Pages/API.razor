@@ -2,6 +2,117 @@
 
 <h3>API</h3>
 
-@code {
+<body>
+    <button onclick="getDadJoke()">Get Dad Joke</button>
+    <div id="humor"></div>
 
-}
+    <script src="scripts.js"></script>
+
+
+</body>
+
+<body>
+    <h2>Fun Translator</h2>
+
+    <input id="userText" type="text" placeholder="Enter text to translate..." style="width:300px;">
+
+    <br>
+    <br>
+
+    <select id="translationType">
+        <option value="yoda">Yoda</option>
+        <option value="pirate">Pirate</option>
+        <option value="minion">Minion</option>
+        <option value="shakespeare">Shakespeare</option>
+        <option value="sith">Sith</option>
+    </select>
+
+    <br>
+    <br>
+
+    <button onclick="translateText()">Translate</button>
+
+    <div id="humor" style="margin-top:20px;"></div>
+
+    <script src="scripts.js"></script>
+</body>
+
+
+
+<script>
+    //my dad joke maker
+
+    window.onload = function () {
+        getDadJoke();
+    }
+    function getDadJoke() {
+        let xhr = new XMLHttpRequest();
+        let url = " https://icanhazdadjoke.com/"
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Accept", "application/json");
+
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+
+                document.getElementById("humor").innerHTML = `<h1>${data.joke}</h1>`;
+
+            }
+            else {
+                document.getElementById("humor").innerHTML = "Error: " + xhr.status;
+            }
+        }
+
+        xhr.send();
+    }
+
+
+        window.onload = function () {
+        getFunTranslation();
+    }
+
+
+
+    //chats translator
+
+        function translateText() {
+        const userText = document.getElementById("userText").value;
+        const type = document.getElementById("translationType").value;
+
+        if (!userText.trim()) {
+            document.getElementById("humor").innerHTML = "<p>Please enter some text.</p>";
+            return;
+        }
+
+        const url = `https://api.funtranslations.com/translate/${type}.json`;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        document.getElementById("humor").innerHTML = "<p>Translating...</p>";
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                let data = JSON.parse(xhr.responseText);
+
+                document.getElementById("humor").innerHTML = `
+                    <h3>${data.contents.translated}</h3>
+                    <p><small>Original: ${data.contents.text}</small></p>
+                `;
+            } else {
+                document.getElementById("humor").innerHTML = `
+                    <h3>Error ${xhr.status}</h3>
+                    <p>You might be rate-limited (only 5 requests/hour for free).</p>
+                `;
+            }
+        };
+
+        xhr.send("text=" + encodeURIComponent(userText));
+    }
+
+
+</script>
+
+
