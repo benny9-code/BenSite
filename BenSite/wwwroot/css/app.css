@@ -1,3 +1,7 @@
+body {
+    background-color: #0067A5;
+}
+
 :root {
     --bs-primary: #FFBF00;
     --bs-secondary: #0067A5;
@@ -130,11 +134,12 @@ bodyHome {
 .graph {
     flex: 1;
     padding: 40px;
+    text-align: center;
 }
 
 img {
-/*    vertical-align: middle;
-    border-radius: 50%;*/
+    width: 300px;
+    height: auto;
 }
 
 button {
@@ -144,6 +149,10 @@ button {
 
 .topResume {
     color: #0067A5;
+    text-align: center;
+}
+
+.resumeText {
     text-align: center;
 }
 
@@ -232,6 +241,39 @@ bodyClone {
     height: auto;
     object-fit: cover
 }
+
+.two-third {
+    display: flex;
+}
+
+.left-split {
+    flex: 2;
+}
+
+.right-split {
+    flex: 1;
+}
+
+.vertIMG {
+    width: 100px;
+    height: auto;
+}
+.boat {
+    width: 300px;
+    height: auto;
+}
+.car {
+    width: 900px;
+    height: auto;
+}
+.borderRec {
+    color: #D3D3D3;
+    background-color: #00008B;
+}
+.borderSmallerRec {
+    background-color: red;
+}
+
 
 /*Experiment page from chat (with non coliding namespace)*/
 .my3d-demo {
