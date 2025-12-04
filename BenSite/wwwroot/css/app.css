@@ -127,8 +127,24 @@ bodyHome {
 
 .BenDiv {
     display: flex;
-    align-items: center;
-    margin: 40px;
+    flex-direction: column;
+}
+
+/*solutions form mobile screens (stacks into columns)*/
+@media (min-width: 768px) {
+    .BenDiv {
+        flex-direction: row;
+    }
+}
+
+/*a solution involving width*/
+@media (max-width: 600px) {
+    .BenDiv {
+        margin: 10px;
+    }
+    .graph {
+        padding:10px
+    }
 }
 
 .graph {
@@ -138,12 +154,14 @@ bodyHome {
 }
 
 img {
-    width: 300px;
+    max-width: 100%;
     height: auto;
 }
 
 button {
-    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
@@ -154,6 +172,18 @@ button {
 
 .resumeText {
     text-align: center;
+}
+
+footer{
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.BenMain, .BenDiv, footer {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 
@@ -170,6 +200,7 @@ dialog {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
 }
 
     dialog::backdrop {
